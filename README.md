@@ -147,18 +147,14 @@ end
 ```
 use_random_seed 11
 melody = scale(:e4, :egyptian, num_octaves: 2).ring.shuffle
-# teeme sleepi ka randomi?
-# kokku peaks mingi täisarv saama
 
 sleeps = [0.25, 0.25, 0.25, 0.25, 0.5, 0.5].ring.shuffle
 
-live_loop :melody, sync: :bd do
-  stop
+live_loop :melody do
   use_synth :prophet
   8.times do
     play melody.tick, amp:1
     sleep sleeps.tick
-    sleep 8
   end
 end
 ```
