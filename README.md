@@ -12,8 +12,14 @@ Seejärel igaüks proovib teha "loo". Võib ka grupitööd teha.
 
 Lõpus võimalus teistele presenteerida oma lugu. Sellega kogud *fame*'i.
 
+
 ## Juhised
 
+Kopeeri allolevaid koodijuppe tekstiaknasse ja kliki "Run" (üleval vasakul ääres).
+
+Ametlik dokumentatsioon: https://sonic-pi.net/tutorial.html
+
+Samuti on dokumentatsioon Sonic Pi rakenduses nähtav. Kui ei ole, siis paremal üleval ääres on "Help" nupp, mis toob selle nähtavale.
 
 ### `play`
 
@@ -72,3 +78,49 @@ play :E4
 sleep 0.5
 play :C4
 ```
+
+### Instrument
+
+`use_synth :prophet`
+
+Edaspidi mängitavad noodid tulevad seda sünti kasutades. Kui kirjutad `use_synth :`, peaks SonicPi sulle pakkuma valikut. Võid katsetada.
+
+### Sämplid
+
+`sample :loop_amen`
+
+Samuti `sample :` annab sulle valiku. `loop_` tsükleid on veel.
+
+### Kordus / tsükkel
+
+Võib kirjutada nii:
+
+```
+sample :loop_amen
+sleep sample_duration :loop_amen
+sample :loop_amen
+sleep sample_duration :loop_amen
+sample :loop_amen
+sleep sample_duration :loop_amen
+```
+Sedasi mängitakse amen *loop*i kolm korda. Aga mis siis, kui on vaja 100 korda?
+
+Kordust on võimalik kirjeldada sedasi:
+
+```
+12.times do
+  sample :loop_amen
+  sleep sample_duration :loop_amen
+end
+```
+
+Aga lõputu kordus?
+
+```
+loop do
+  sample :loop_amen
+  sleep sample_duration :loop_amen
+end
+```
+
+See lõpetab ära siis, kui vajutad "stop".
