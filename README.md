@@ -46,3 +46,29 @@ Paus kahe korralduse vahel.
 Paus üks löök.
 
 Löögipikkuse saab määrata: `use_bpm 120` - 120 lööki minutis, üks löök on umbes pool sekundit.
+
+### `amp`
+
+*Amplitude* ehk "helivaljudus". Kõrgem väärtus teeb kõvemat häält. Saab kasutada näiteks `play` käsu juures:
+
+`play 50, amp: 2`
+
+Vaikimisi väärtus on 1 (st kui ei määra amp väärtust eraldi, siis on see 1).
+
+`play :E4, amp 0.4`
+
+(0.4 on vaiksem kui tavaliselt).
+
+### Sepapoiss
+
+Proovi seda:
+
+```
+play :C4
+sleep 0.5
+play :D4
+sleep 0.5
+play :E4
+sleep 0.5
+play :C4
+```
