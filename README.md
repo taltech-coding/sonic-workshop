@@ -1,5 +1,5 @@
 # WonicPi töötuba
 
-Tõmba alla Sonic Pi: ained.ttu.ee/javadoc/SonicPi.exe
+Tõmba alla Sonic Pi: https://ained.ttu.ee/javadoc/SonicPi.exe
 
 
