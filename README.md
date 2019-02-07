@@ -158,3 +158,49 @@ live_loop :melody do
   end
 end
 ```
+
+## Workshopi "teos"
+
+```
+# Welcome to Sonic Pi v3.1
+
+use_bpm 80
+
+live_loop :sally do
+  stop
+  sample :loop_amen, beat_stretch: 2, amp:0.5
+  sleep 2
+end
+
+live_loop :sam do
+  play :C4
+  sleep 0.5
+  play :D4
+  sleep 0.5
+  play :E4
+  sleep 0.5
+  play :F4
+  sleep 0.5
+end
+
+live_loop :cow, sync: :sam do
+  sample :drum_cowbell, amp: 0.2
+  sleep 0.5
+end
+
+live_loop :beat do
+  sample :bd_haus
+  sleep 0.25
+  sample :bd_haus
+  sleep 0.25
+  sample :bd_haus
+  sleep 0.5
+  sample :drum_snare_hard
+  sleep 1
+end
+
+live_loop :hh do
+  sample :drum_cymbal_closed
+  sleep 0.25
+end
+```
