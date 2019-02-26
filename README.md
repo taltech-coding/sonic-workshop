@@ -204,3 +204,6 @@ live_loop :hh do
   sleep 0.25
 end
 ```
+
+
+Edasi uurimist: https://aimxhaisse.com/aerodynamic-en.html
